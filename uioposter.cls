@@ -344,6 +344,26 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+\newcommand{\enumitem}[1]
+{
+    \leavevmode\unskip
+    \hbox
+    {%
+        \usebeamerfont*{item projected}%
+        \usebeamercolor[bg]{item projected}%
+        \vrule width2.25ex height1.85ex depth.4ex%
+        \hskip-2.25ex%
+        \hbox to2.25ex
+        {%
+            \hfil%
+            \color{fg}#1%
+            \hfil
+        }%
+    }%
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \pgfpagesdeclarelayout{resize and center}
 {
     \def\pgfpageoptionborder{0pt}
