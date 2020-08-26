@@ -1,0 +1,110 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Class options                        %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Orientation:                         %
+% portrait (default), landscape        %
+%                                      %
+% Paper size:                          %
+% a0paper (default), a1paper, a2paper, %
+% a3paper, a4paper, a5paper, a6paper   %
+%                                      %
+% Language:                            %
+% english (default), norsk             %
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\documentclass{uioposter}
+
+
+\usepackage{lipsum}                                % Dummy text
+\usepackage[figwidth = 0.98\linewidth]{todonotes}  % Dummy image (and more!)
+\usepackage[absolute, overlay]{textpos}            % Figure placement
+\setlength{\TPHorizModule}{\paperwidth}
+\setlength{\TPVertModule}{\paperheight}
+
+
+\title{Some Lengthy and Technical Title}
+\author
+{%
+    First Author\inst{1}
+    \and
+    Second Author\inst{2}
+    \and
+    Third Author\inst{1}
+}
+%% Optional:
+\institute
+{
+    \inst{1} Department of Mathematics
+    \and
+    \inst{2} Department of Informatics
+}
+% Or:
+%\institute{Contact information}
+
+
+%% Remove footline:
+%\setbeamertemplate{footline}{}
+
+
+\begin{document}
+\begin{frame}
+\begin{columns}[onlytextwidth]
+
+
+\begin{column}{0.5\textwidth - 1.5cm}
+    \begin{block}{Introduction}
+        The basic \structure{block} looks like this.
+    \end{block}
+
+    \begin{exampleblock}{Does it come in black?}
+        Sure, use an \textbf{exampleblock}!
+    \end{exampleblock}
+
+    \begin{alertblock}{How do you make it pop?}
+        Use an \alert{alertblock}!
+    \end{alertblock}
+
+    \begin{block}{Method}
+        \lipsum[1]
+    \end{block}
+
+    \begin{block}{Results}
+        \lipsum[2]
+        \missingfigure{Striking imagery relevant to the research}
+        \unskip
+    \end{block}
+\end{column}
+
+
+\begin{column}{0.5\textwidth - 1.5cm}
+    \begin{block}{Conclusions}
+        \lipsum[4]
+    \end{block}
+
+    \begin{block}{Acknowledgements}
+        \lipsum[5]
+    \end{block}
+
+    \begin{block}{References}
+        \lipsum[6]
+    \end{block}
+
+    \begin{block}{Contact information}
+        \lipsum[75]
+    \end{block}
+\end{column}
+
+
+\end{columns}
+
+
+\begin{textblock}{0.5}(0.18, 0.94)
+    \color{white}
+    \sffamily
+    \textbf{Write here using textblock}
+    \\
+    Such as contact information or references
+\end{textblock}
+
+
+\end{frame}
+\end{document}
