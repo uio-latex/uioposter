@@ -1,5 +1,5 @@
 %% Implemented by Martin Helsø (martibhe@math.uio.no)
-%% Version: 08-05-2018
+%% Version: 23-09-2019
 
 
 \NeedsTeXFormat{LaTeX2e}
@@ -76,6 +76,8 @@
 }{}
 \SetSymbolFont{largesymbols}{normal}{OMX}{cmex}{m}{n}
 \SetSymbolFont{largesymbols}{bold}  {OMX}{cmex}{m}{n}
+\setlength{\marginparwidth}{2cm}
+\setlength{\emergencystretch}{1em}
 \frenchspacing
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -168,15 +170,13 @@
     \begin{beamercolorbox}[wd = \paperwidth,
                            leftskip  = 3cm,
                            rightskip = 3cm plus 20cm]{headline}
-        \vskip3cm
+        \vskip-0.5cm
         \includegraphics[scale = 1.5]
-        {%
-            uioposter-images/uioposter-logo-\uioposter@lang
-        }
+        {uioposter-images/uioposter-logo-\uioposter@lang}
         \usebeamerfont{title in headline}
         \usebeamercolor{title in headline}
         \color{fg}
-        \vskip1ex
+        \vskip0ex
         \hskip-0.05ex
         \inserttitle
         \vskip1ex
@@ -345,22 +345,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newcommand{\enumitem}[1]
-{
+{{%
     \leavevmode\unskip
-    \hbox
-    {%
-        \usebeamerfont*{item projected}%
-        \usebeamercolor[bg]{item projected}%
-        \vrule width2.25ex height1.85ex depth.4ex%
-        \hskip-2.25ex%
-        \hbox to2.25ex
-        {%
-            \hfil%
-            \color{fg}#1%
-            \hfil
-        }%
-    }%
-}
+    \def\insertenumlabel{#1}
+    \usebeamertemplate*{enumerate item}%
+}}
+
+
+\newcommand{\enumref}[1]{\enumitem{\ref{#1}}}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
