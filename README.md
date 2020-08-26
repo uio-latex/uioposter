@@ -6,6 +6,8 @@ It features the official colours and logo of the university.
 For posters that display a collaboration with other institutions,
 it is recommended that you use a more neutral design.
 
+Also available on [Overleaf](https://www.overleaf.com/latex/templates/uioposter/tsmrpnztthrr).
+
 ##### Disclaimer
 The design was originally created for portrait mode.
 Landscape mode has only been treated as an afterthought,
